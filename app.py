@@ -31,15 +31,6 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route('/testing', methods=['POST'])
-def testing():
-    payload = request.json
-    ref = payload.get('ref', '')
-
-    # Check if the push is to the desired branch, e.g., 'refs/heads/testing'
-    if ref == 'refs/heads/testing':
-        # this hook is coming from a push done to the "testing" branch
-        # Add your code logic here
 
 @app.route("/api/hello")
 def hello():
