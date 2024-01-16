@@ -16,7 +16,7 @@ from flask import url_for
 from flask.json import jsonify
 
 
-
+#
 ##########################################################################
 ## Application Setup
 ##########################################################################
@@ -30,6 +30,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 @app.route("/api/hello")
 def hello():
